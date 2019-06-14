@@ -5,6 +5,189 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/colorBackground"
         tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/main_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="43dp"
+        android:text="@string/main_label"
+        android:textColor="@color/colorText"
+        android:textSize="16sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+    />
+
+    <TextView
+        android:id="@+id/sub_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/sub_label"
+        android:textColor="@color/colorAccent"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/main_label"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+    />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/result_constraint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/sub_label"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+    >
+        <TextView
+                android:id="@+id/result_litre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/result_main_text"
+                android:textColor="@color/colorText"
+                android:textSize="40sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+        />
+
+        <TextView
+                android:id="@+id/litre_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2pt"
+                android:layout_marginBottom="3pt"
+                android:text="@string/litle_label_text"
+                android:textSize="12sp"
+                android:textColor="@color/colorSubText"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/result_litre"
+        />
+
+        <TextView
+                android:id="@+id/money_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8sp"
+                android:layout_marginBottom="3pt"
+                android:textColor="@color/colorText"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/litre_label"
+        />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="41dp"
+        app:layout_constraintTop_toBottomOf="@id/result_constraint"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginStart="16sp"
+        android:layout_marginEnd="16sp"
+    >
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/edit_range_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="8dp"
+            android:background="@drawable/edit_text_rounder"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_range"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="12dp"
+                android:paddingTop="5dp"
+                android:hint="@string/range_hint"
+                android:textColor="@color/colorEditText"
+                android:background="@android:color/transparent"
+                android:inputType="numberDecimal"
+            />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/edit_cons_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16sp"
+            android:paddingTop="8dp"
+            android:background="@drawable/edit_text_rounder"
+            app:layout_constraintTop_toBottomOf="@id/edit_range_layout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_cons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="12dp"
+                android:paddingTop="5dp"
+                android:hint="@string/cons_hint"
+                android:textColor="@color/colorEditText"
+                android:background="@android:color/transparent"
+                android:inputType="numberDecimal"
+            />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/edit_litre_cost_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16sp"
+            android:paddingTop="8dp"
+            android:background="@drawable/edit_text_rounder"
+            app:layout_constraintTop_toBottomOf="@id/edit_cons_layout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_litre_cost"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginBottom="12dp"
+                    android:paddingTop="5dp"
+                    android:hint="@string/litre_cost_hint"
+                    android:textColor="@color/colorEditText"
+                    android:inputType="numberDecimal"
+                    android:background="@android:color/transparent"
+            />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_calc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16sp"
+            android:background="@drawable/button_rounder"
+            android:text="@string/button_calc_text"
+            android:textColor="@color/colorText"
+            app:layout_constraintTop_toBottomOf="@id/edit_litre_cost_layout"
+        />
+
+        <TextView
+            android:id="@+id/button_clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24sp"
+            android:text="@string/button_clear_text"
+            android:textColor="@color/colorSubText"
+            android:textSize="16sp"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintTop_toBottomOf="@id/button_calc"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+        />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

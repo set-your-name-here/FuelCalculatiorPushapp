@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">FuelCalculatiorPushapp</string>
+    <string name="main_label">Калькулятор расчета топлива</string>
+    <string name="sub_label">Результат</string>
+    <string name="litre_cost_hint">Стоимость 1 литра</string>
+    <string name="cons_hint">Расход топлива на 100 км</string>
+    <string name="range_hint">Расстояние (км)</string>
+    <string name="button_clear_text">Очистить все поля</string>
+    <string name="button_calc_text">Рассчитать</string>
+    <string name="result_main_text">0</string>
+    <string name="litle_label_text">литров</string>
 </resources>
