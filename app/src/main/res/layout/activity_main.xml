@@ -108,7 +108,7 @@
                 android:hint="@string/range_hint"
                 android:textColor="@color/colorEditText"
                 android:background="@android:color/transparent"
-                android:inputType="number"
+                android:inputType="numberDecimal"
             />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -132,7 +132,7 @@
                 android:hint="@string/cons_hint"
                 android:textColor="@color/colorEditText"
                 android:background="@android:color/transparent"
-                android:inputType="number"
+                android:inputType="numberDecimal"
             />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -155,7 +155,7 @@
                     android:paddingTop="5dp"
                     android:hint="@string/litre_cost_hint"
                     android:textColor="@color/colorEditText"
-                    android:inputType="number"
+                    android:inputType="numberDecimal"
                     android:background="@android:color/transparent"
             />
 
