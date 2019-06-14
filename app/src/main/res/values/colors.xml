@@ -9,4 +9,5 @@
     <color name="colorSubText">#80FFFFFF</color>
     <color name="colorAccent">#F26D22</color>
     <color name="colorHint">#A0A0A0</color>
+    <color name="colorError">#FF0000</color>
 </resources>
